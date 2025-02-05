@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesla Timeline</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/navStyle.css" />
+    <link rel="stylesheet" href="./css/timeline.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <a href="index.html" class="logo">NIKOLA TESLA</a>
+        <input type="checkbox" id="nav-toggle" />
+        <label for="nav-toggle" class="mobile-nav-toggle">
+          <span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventions.html">Inventions</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Tesla's Journey Through Time</h1>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1856</div>
+          <h2 class="timeline-title">Birth of a Genius</h2>
+          <p>
+            Nikola Tesla was born in Smiljan, Austrian Empire (modern-day
+            Croatia) during a lightning storm.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1884</div>
+          <h2 class="timeline-title">Arrival in New York</h2>
+          <p>
+            Tesla arrived in New York City with four cents in his pocket and a
+            letter of recommendation for Thomas Edison.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1888</div>
+          <h2 class="timeline-title">AC Motor Patent</h2>
+          <p>
+            Tesla received patents for his revolutionary AC motor and power
+            system, changing the course of electrical history.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1893</div>
+          <h2 class="timeline-title">World's Fair Triumph</h2>
+          <p>
+            Tesla's AC system illuminated the World's Columbian Exposition in
+            Chicago, demonstrating its superiority.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1943</div>
+          <h2 class="timeline-title">Final Chapter</h2>
+          <p>
+            Tesla passed away in New York City, leaving behind a legacy that
+            would inspire generations of inventors.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Tesla</h3>
+          <p>
+            Dedicated to preserving and sharing the legacy of Nikola Tesla, one
+            of history's greatest inventors and visionaries.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inventions.html">Inventions</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="legacy.html">Legacy</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li>
+              <a
+                href="https://www.researchgate.net/publication/3917442_Nikola_Tesla_145_years_of_visionary_ideas"
+                >Research Papers</a
+              >
+            </li>
+            <li>
+              <a href="https://tesla-museum.org/en/nikola-tesla-2/patents/"
+                >Patents</a
+              >
+            </li>
+            <li>
+              <a href="https://topdocumentaryfilms.com/nikola-tesla-the-genius/"
+                >Documentaries</a
+              >
+            </li>
+            <li>
+              <a href="https://www.britannica.com/biography/Nikola-Tesla"
+                >Biography</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>
+            Subscribe to our newsletter for updates and insights about Nikola
+            Tesla.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Tesla Tribute. All rights reserved.</p>
+        <p>Designed by Suraj Gunjal</p>
+      </div>
+    </footer>
+
+    <script>
+      // Intersection Observer for timeline items
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      // Observe all timeline items
+      document.querySelectorAll(".timeline-item").forEach((item) => {
+        observer.observe(item);
+      });
+    </script>
+  </body>
+</html>

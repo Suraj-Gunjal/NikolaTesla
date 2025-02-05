@@ -1,0 +1,47 @@
+.inventions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.invention-card {
+    color: black;
+    height: 450px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.invention-card:hover {
+    transform: translateY(-10px);
+}
+
+.invention-image {
+    height: 250px;
+    overflow: hidden;
+
+}
+
+.invention-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.invention-content {
+    padding: 1.5rem;
+}
+
+.invention-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .inventions-grid {
+        grid-template-columns: 1fr;
+    }
+}
